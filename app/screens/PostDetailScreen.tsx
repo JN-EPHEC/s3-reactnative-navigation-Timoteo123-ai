@@ -10,7 +10,9 @@ export default function PostDetailScreen({ route }: Props) {
 
   return (
     <View style={styles.container}>
-      {/* Replace this with your code for the details of an item, use properties ! */}
+      {
+        <Text>{title}</Text>
+      }
     </View>
   );
 }

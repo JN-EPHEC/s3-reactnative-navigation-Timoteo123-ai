@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Pressable, FlatList, Text, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../_layout";
+import { Button } from "@react-navigation/elements";
 
 type Props = NativeStackScreenProps<RootStackParamList, "PostList">;
 
@@ -34,16 +35,23 @@ const POSTS = [
 
 export default function PostListScreen({ navigation }: Props) {
   function renderItem({ item }: { item: (typeof POSTS)[number] }) {
+    console.log(item)
     return (
       <>
-        {/* Replace this with your code here for each item to render (Use Pressable Component) */}
+        {<Text>Test</Text>}
+        <Button onPress = {() =>navigation.navigate({ name: "PostDetail", params: { postId: item.id, title: 'aaa', content: "zzzz" }})}>hh</Button>
       </>
     );
   }
 
   return (
     <View style={styles.container}>
-      {/* Replace this with your code to render the list of items */}
+      {
+        <FlatList data={POSTS}
+        renderItem={renderItem}
+        keyExtractor={item =>item.id}
+        />
+      }
     </View>
   );
 }
