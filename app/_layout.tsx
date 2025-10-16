@@ -5,7 +5,7 @@ import PostListScreen from "./screens/PostListScreen";
 import PostDetailScreen from "./screens/PostDetailScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { HomeScreen, ProfileScreen, SettingsScreen } from "./(tabs)/Home";
+import { Shop, MyCart } from "./(tabs)/Home";
 
 export type RootStackParamList = {
   PostList: undefined;
@@ -24,10 +24,12 @@ export default function RootLayout() {
     
     </Stack.Navigator> */}
        <Tab.Navigator>
-                <Tab.Screen name="Home" component={HomeScreen} />
-                <Tab.Screen name="Settings" component={SettingsScreen} />
-                <Tab.Screen name="Profils" component={ProfileScreen} />
+                <Tab.Screen name="Shop" component={Shop} />
+                <Tab.Screen name="My Cart" component={MyCart} />
             </Tab.Navigator>
     </>);
     
 }
+
+
+

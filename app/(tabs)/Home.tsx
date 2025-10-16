@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 
-export function HomeScreen() {
+export function MyCart() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Text>Welcome to the App\!</Text>
@@ -14,15 +14,7 @@ export function HomeScreen() {
     );
 }
 
-export function SettingsScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>App Settings</Text>
-        </View>
-    );
-}
-
- export function ProfileScreen() {
+export function Shop() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Text>App Settings</Text>
